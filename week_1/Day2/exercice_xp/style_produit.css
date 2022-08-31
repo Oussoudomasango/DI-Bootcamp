@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+
+}
+.prod{
+    display: inline;
+}
+.new, .pourcentage{
+    color: rgb(236, 249, 255);
+    border-radius: 95%;
+    padding: 3%;
+    width: 10%;
+    display: inline;
+    font-weight: 800;
+}
+.new{
+    background-color: cornflowerblue;
+    position: relative;
+    top: 1%;
+    left: 16%;
+    right: 1%;
+    bottom: 1%;
+    float: left;
+    
+}
+.pourcentage{
+    background-color: red;
+    position: relative;
+    top: 1%;
+    left: -18 %;
+    right: 1%;
+    bottom: 1%;
+    float: right;
+}
+section{
+    width: 31%;
+    height: auto;
+    display: inline;
+}
+.produit1{
+    float: left;
+    position: relative;
+    top:1% ;
+    left: 1%;
+    right: 1%;
+    bottom:1% ;
+}
+.produit2{
+    float:left;
+    position: relative;
+    top:1% ;
+    left: 1%;
+    right: 1%;
+    bottom:1% ;
+}
+.produit3{
+    float: left;
+    position: relative;
+    top:1% ;
+    left: 1%;
+    right: 1%;
+    bottom:1% ;
+}
+.produit4{
+    float: left;
+    position: relative;
+    top:1% ;
+    left: 1%;
+    right: 1%;
+    bottom:1% ;
+}
+p{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.prix{
+    font-weight: 700;
+    font-size: medium;
+    color: lime;
+}
+a{
+    text-decoration: none;
+}
+del{
+    font-size: smaller;
+    color: darkcyan;
+}
+.add{
+    padding: 3%;
+    border: 1px solid black;
+    font: 1em sans-serif;
+}
+
+@media all and (min-width: 1200px)  { 
+    section{
+        
+        width: 31%;
+        height: auto;
+        display: inline-;
+    }
+    }
+}
+
+@media all and (min-width: 992px) {
+    section{
+        width: 230px;
+        height: auto;
+        display: inline;
+    }
+    }
+ }
+
+@media all and (min-width: 768px) {
+    section{
+        width: 300px;
+        height: auto;
+        display: inline;
+    }
+    }
+
+ }
+
+@media all and (min-width: 600px) { 
+    section{
+        width: 550px;
+        height: auto;
+        display: inline;
+    }
+    
+
+
+
+figure{
+    <i style='font-size:24px' class='fas'>&#xf218;</i>
+}
+

@@ -1,0 +1,57 @@
+body{
+    width: 1000px;
+    margin: 0px;
+    padding: 0px;
+    overflow-wrap: break-word;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: darkslategrey;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+
+}
+i{
+    color: white; 
+    font-size: xx-large;
+    text-align: center;
+    margin: 15px 0px ;
+}
+li{
+    float: right;
+}
+li a {
+    color: blanchedalmond;
+    padding: 14px 16px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: x-large;
+}
+li a:hover{
+    background-color: darkslateblue;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: darkslategray;
+    color: floralwhite;
+    height: 50px;
+    text-align: center;
+}
+.main{
+    display: block;
+    overflow-y: auto;
+}
+.prod{
+    height: 900px;
+    display: inline;
+    overflow-y: scroll;
+    position: absolute;
+}

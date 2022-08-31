@@ -1,0 +1,13 @@
+body{
+    margin: 0;background-color: cadetblue;
+}
+
+h1{
+    text-align: center;
+}
+.login{
+    padding: 2%;
+    background-color: rgba(216, 17, 60, 0.911); margin: auto; overflow-wrap: break-word; width: 60%;
+ }
+
+fieldset{background-color: rgba(216, 17, 60, 0.911); margin: auto; overflow-wrap: break-word; width: 60%; }
