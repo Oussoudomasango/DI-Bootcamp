@@ -31,12 +31,10 @@ for(let i = 0; i<2; ++i)
 
     if (i==0) 
     console.log(étoile[0]);
-    else{
-        console.log(étoile.join(" "));
-    }
-for (let j = 0; j<2; ++j)
+   
+for (let j = 0; j<3; ++j)
     {
-        console.log(étoile2.join(" "));
+        console.log(étoile2.join(" ") + "2");
         étoile2.push("*");
     }    
 }
