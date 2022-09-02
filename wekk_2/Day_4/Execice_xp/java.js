@@ -147,12 +147,67 @@ console.log(result);
 console.log (" ");
 console.log("Exercice 6");
 console.log(" ");
+var nuit;
+var somme;
+var destination;
+var coût;
 
 function hotelCost()
-{
-    let nuit = prompt("Combien de nuit aimerais vous passer dans la suite : ");
-    number
-}
-
+{ 
+    do{
 
     
+     nuit = parseInt(prompt("Combien de nuit aimerais vous passer dans la suite : "));
+    }while(typeof(nuit)!='number');
+    somme=nuit*140;
+    return somme;
+}
+hotelCost();
+console.log("Le prix de l'hotel pour le séjour est " + '$' +somme );
+
+// deuxième question
+console.log(" ");
+
+function planeRideCost()
+{
+    do{
+        destination=prompt("Quel est votre destination : ");
+    }while(typeof(destination)=='string');
+    if(destination=="Londres")
+    coût = 183 ;
+    else if(destination=="Paris")
+    coût=220;
+    else
+    coût=300;
+
+    return coût;
+
+}
+
+planeRideCost();
+console.log (" Vous serez facturer à " + '$' +coût);
+
+// troisième question
+console.log(" ");
+
+var nombredeJour;
+var coûtdelocation;
+function rentalCarCost() 
+{
+    do{
+        nombredeJour= parseInt(prompt("Quel nombre de jour voulez vous utiliser la voiture : "));
+    }while(typeof(nombredeJour)!= 'number');
+    coûtdelocation = nombredeJour * 40;
+    if (nombredeJour>10)
+    {
+        coûtdelocation =coûtdelocation-0.05*coûtdelocation; 
+    }
+    return coûtdelocation;
+}
+
+rentalCarCost();
+console.log("la facture de location du véhicule est : " + coûtdelocation);
+
+// quatrième question
+console.log(" ");
+ 
