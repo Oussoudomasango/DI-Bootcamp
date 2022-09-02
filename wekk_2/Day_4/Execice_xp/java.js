@@ -107,7 +107,7 @@ function myBill() {
             console.log("le prix de " + x + " est" + prices[x] + " fcfa");
             stock[x]= stock[x]-1;
             montant = montant + prices[x];
-            
+
         }
         
     }
@@ -115,3 +115,44 @@ function myBill() {
 };
 let prix = myBill();
 console.log("Le prix total est : " + prix );
+console.log(" ");
+console.log("le stock restant est : ");
+    console.log(stock);
+
+// Exercice 5
+console.log(" ");
+console.log("Exercice 5");
+console.log(" ");
+
+var result;
+function changeEnough(itemPrice, amountOfChange)
+{
+    let somme=amountOfChange[0]*0.25 + amountOfChange[1]*0.1 + amountOfChange[2]* 0.05 + amountOfChange[3]*0.01;
+    if(somme>=itemPrice)
+    {
+        result ="true";
+        return result;
+    }
+    else
+    {
+        result ="false" ;
+        return result;
+    }
+}
+
+changeEnough(0.75,[0,0,20,5]);
+console.log(result);
+
+// Exercice 6
+console.log (" ");
+console.log("Exercice 6");
+console.log(" ");
+
+function hotelCost()
+{
+    let nuit = prompt("Combien de nuit aimerais vous passer dans la suite : ");
+    number
+}
+
+
+    
