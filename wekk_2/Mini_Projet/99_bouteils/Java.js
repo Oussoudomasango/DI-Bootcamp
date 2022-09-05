@@ -26,8 +26,8 @@ for(i=0;i<nombre;i++)
         }
     else if (i>0)
         {
-        console.log(j-t + " bottles of beer on the wall");
-        console.log(j-t + " bottles of beer");
+        console.log(j-t+1 + " bottles of beer on the wall");
+        console.log(j-t+1 + " bottles of beer");
         }
     console.log("Take "+ t + "down,pass it around");
     console.log(j-t + " bottles of beer on the wall ");
