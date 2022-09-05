@@ -9,7 +9,7 @@ Take 1 down, pass it around
 var i=0;
 var j=0;
 var nombre=0;
-function playTheSong { 
+function playTheSong () { 
 do{ 
     nombre = parseInt(prompt("Veuillez entrer le nombre de fois que je dois chanter :"));
 }while(isNaN(nombre) || nombre<0);
