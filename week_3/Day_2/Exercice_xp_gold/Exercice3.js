@@ -2,7 +2,7 @@
 console.log("Exercice 3");
 console.log(" ");
 
-let articleListe=[];
+let shoppingList=[];
 
 console.log(" ");
 newform=document.createElement("form");
@@ -26,10 +26,10 @@ function addItem()
 {
     var choisi=document.getElementById("val").value ;
     console.log(choisi);
-    articleListe[articleListe.length]=choisi;
+    shoppingList[shoppingList.length]=choisi;
 
     console.log("Votre liste de courses");
-    for (const element of articleListe) 
+    for (const element of shoppingList) 
     {
         console.log(element);
         alert (element);  
@@ -48,8 +48,8 @@ newText2 = document.createTextNode("clearAll");
 
     console.log(" ");
     function clearAll(){
-        console.log(articleListe)
-        articleListe.length=0;
+        console.log(shoppingList)
+        shoppingList.length=0;
         console.log("votre liste de courses est vide");
         alert("votre liste de courses est vide");
     }
