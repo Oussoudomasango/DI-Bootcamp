@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: burlywood;
+background-color: rgb(59, 189, 70);
+display: grid;
+grid-template-columns:1fr 3fr ;
+grid-template-rows: auto;
+}
+
+.photo{border: solid 25px dimgray; max-width: 100%; height: auto; border-radius: 60%; margin:15%;}
+.WhatsApp{width: 1.5em; ; height: auto;}
+p{text-align: center;}
+ul{font-family: 'Times New Roman', Times, serif; font-weight: 600;}
+details{ cursor: pointer; margin-left: 3%; font-size: 0.8em; color: darkblue;}
+li{margin-left: 5%; font-size: 0.9em;color: black;}
+span{font-size: 2.2em;}
+h1{text-align: center; font-size: 2.5rem;}
+.FSD{font-size: 2.2rem; margin-top: 5%;}
+a{text-decoration: none ; margin-top: 2%;} 
+.mail{; font-size: 1.8rem; color: deepskyblue;}
+.aside{
+    height: 100%;
+    background-color: floralwhite;
+}
+.principale{
+    height: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+}
+.items{
+    margin: 3% 1% ;
+    padding: 3% 1% ;
+    flex-grow: 1;
+}
+
+.profile{}
+.education{}
+.skills{}
+.expérience{}
