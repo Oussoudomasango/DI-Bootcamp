@@ -1,0 +1,5 @@
+CREATE TABLE items (
+id SERIAL PRIMARY KEY,
+item_name VARCHAR (100) NOT NULL,
+price INTEGER  NOT NULL
+);
