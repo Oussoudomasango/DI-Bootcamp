@@ -37,3 +37,11 @@ SELECT first_name,last_name FROM students WHERE first_name LIKE '%a'  ;
 SELECT first_name,last_name FROM students WHERE first_name LIKE '%a_'  ;
 --3_8
 SELECT first_name,last_name FROM students WHERE  id = 1  or id= 3 ;
+--4
+SELECT * FROM students WHERE birth_date >= '01/01/2000';
+
+
+
+
+
+
