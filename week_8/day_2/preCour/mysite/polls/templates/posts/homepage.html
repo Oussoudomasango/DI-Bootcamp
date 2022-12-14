@@ -1,0 +1,97 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {{ page_title|default:"Homepage" }}
+        {% endblock title %}
+    </title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+            {% block content %}
+            <div class="row">
+                <h1>
+                    <img alt="image_profile_{{user.first_name}}_{{user.last_name}}"
+                    src={{user.imageprofile.image}} width=30>
+                    Hello {{user.first_name}} {{user.last_name}}
+                </h1>
+            </div>
+            <div class="row">
+                <h2>Welcome to my website</h2> 
+            </div>
+            {% endblock content %}
+
+
+    <div class="row">
+        <form method="post">
+         {% csrf_token %}
+
+         {% for field in form %}
+            <div class="form-group">
+                <label for="{{field.id_for_label}}">{{field.label}}</label>
+
+                <!-- if the field is the comment : then the input is a textarea-->
+                {% if field.name == 'comment' %}
+                    <textarea class="form-control" id="{{field.auto_id}}" 
+                    rows="3"  name="{{field.name}}"
+                    {% if field.field.required %} required {% endif %}
+                    placeholder="{{ field.field.widget.attrs.placeholder }}"></textarea>
+
+                {% else %}
+                    <input type="{{field.field.widget.input_type}}" 
+                     class="form-control" id="{{field.auto_id}}" 
+                     name="{{field.name}}"
+                     {% if field.field.required %} required {% endif %} 
+                     minlength="{{ field.field.min_length }}"
+                     placeholder="{{ field.field.widget.attrs.placeholder }}">
+                {% endif %}
+
+    <!-- Help text in field -->
+                {% if field.help_text %}
+                  <small class="form-text text-muted">{{ field.help_text }}</small>
+                {% endif %}
+
+
+    <!-- Errors in fields -->
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                       <div class="mt-2">
+                         <p class="alert alert-danger">{{error}}</p>
+                       </div>
+                    {% endfor %}
+                {% endif %}
+
+
+            </div>
+
+          {% endfor %}
+            <input {% if btnFormHidden %} type="hidden" {% else %} type="submit" {% endif %}
+            class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+
+<!-- After submitting the form, the information are displayed here  -->
+    <div class="row">
+    {% if formInfo %}
+        <div class="card" style="width: 18rem;">
+        {% for key, value in formInfo.items %} 
+          <div class="card-body">
+            <h5 class="card-title">
+                <span class="info"> Your {{key}}</span> 
+                : {{value}}
+            </h5>
+          </div>
+        {% endfor %}
+       </div> 
+    {% endif %} 
+    </div>
+</div>
+
+</body>
+</html>

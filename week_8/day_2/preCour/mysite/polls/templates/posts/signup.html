@@ -1,0 +1,14 @@
+{% extends 'posts/homepage.html' %}
+
+
+    {% block title %}
+    {{ page_title|default:"Homepage" }}
+    {% endblock title %}
+
+    {% block content %}
+        <h1>Signup page</h1>
+    {% endblock content %}
+
+    {% block form %} {# block created in the homepage.html #}
+        {{ block.super }}
+    {% endblock form %}
