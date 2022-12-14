@@ -1,0 +1,12 @@
+{% extends 'gifs/base.html' %}
+
+{%block title%}
+    {{ title }}
+{%endblock title%}
+
+{%block content%}
+<br><br>
+    {%for gif in gifs %}
+        {{ gif.title }}
+    {%endfor%}
+{%endblock content%}

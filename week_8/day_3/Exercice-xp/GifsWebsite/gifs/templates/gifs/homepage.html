@@ -1,0 +1,15 @@
+{% extends 'gifs/base.html' %}
+
+{%block title%}
+    {{ title }}
+{%endblock title%}
+
+{%block content%}
+<a href="{% url 'addgif' %}">Add new GIF view</a><br>
+<a href="{% url 'category' %}">Add new Category view</a>
+<br><br>
+    {%for gif in gifs %}
+       <img src="{{gif.url}}" alt="mygif">
+       <h1>{{ gif.title }}</h1>
+    {%endfor%}
+{%endblock content%}
