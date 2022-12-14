@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+ {% load static %}
+{% block script %}
+<script src="{% static 'script.js' %}"></script>
+{% endblock script %} 
+
+{% block content %}
+<table class="table table-striped-columns">
+        <thead>
+      <tr>
+        <th scope="col">Titre</th>
+        <th scope="col">Details</th>
+        <th scope="col">has_been_done</th>
+        <th scope="col">Date_creation</th>
+        <th scope="col">Date_completion</th>
+        <th scope="col">Date_echeance</th>
+        <th scope="col">Categorie</th>
+
+      </tr> 
+    </thead>
+    {% for todos in todos %}
+    <tbody>
+      <tr id="ligne">
+        {% comment %} <th scope="row">{{todos.id}}</th> {% endcomment %}
+        <td>{{todos.titre}}</td>
+        <td>{{todos.details}}</td>
+        <td>{{todos.has_been_done}}</td>
+        <td>{{todos.date_creation}}</td>
+        <td>{{todos.date_completion}}</td>
+        <td>{{todos.date_echeance}}</td>
+        <td>{{todos.categorie}}</td>
+        <td><a href="{% url 'display_todos_List' todos.id %}"><button type="button" class="btn btn-success" >Done</button></a></td>
+        <td><a href="{% url 'delete' todos.id %}"><button type="button" class="btn btn-danger" onclick="done(event)" >Delete</button></a></td>
+
+      </tr>
+    </toby>
+    {% endfor %}
+</table>
+{%endblock%}

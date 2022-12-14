@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table table-striped-columns">
+        <thead>
+      <tr>
+        <th scope="col">Titre</th>
+        <th scope="col">Details</th>
+        <th scope="col">has_been_done</th>
+        <th scope="col">Date_creation</th>
+        <th scope="col">Date_completion</th>
+        <th scope="col">Date_echeance</th>
+        <th scope="col">Categorie</th>
+      </tr>
+    </thead>
+    {% for todos in todos %}
+    {% if todos.has_been_done %}
+
+    <tbody>
+      <tr>
+        <td>{{todos.titre}}</td>
+        <td>{{todos.details}}</td>
+        <td>{{todos.has_been_done}}</td>
+        <td>{{todos.date_creation}}</td>
+        <td>{{todos.date_completion}}</td>
+        <td>{{todos.date_echeance}}</td>
+        <td>{{todos.categorie}}</td>
+      </tr>
+    </toby>
+    {% endif %}
+
+    {% endfor %}
+</table>
+{%endblock%}

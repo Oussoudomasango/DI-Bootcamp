@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    {% include 'nav.html' %}<br>
+ <table class="table table-striped-columns">
+    <thead>
+  <tr>
+    <th scope="col">Titre</th>
+    <th scope="col">Details</th>
+    <th scope="col">has_been_done</th>
+    <th scope="col">Date_creation</th>
+    <th scope="col">Date_completion</th>
+    <th scope="col">Date_echeance</th>
+    <th scope="col">Categorie</th>
+  </tr>
+</thead>
+{% for todos in todos %}
+
+<tbody>
+  <tr>
+    <td>{{todos.titre}}</td>
+    <td>{{todos.details}}</td>
+    <td>{{todos.has_been_done}}</td>
+    <td>{{todos.date_creation}}</td>
+    <td>{{todos.date_completion}}</td>
+    <td>{{todos.date_echeance}}</td>
+    <td>{{todos.categorie}}</td>
+  </tr>
+</toby>
+
+{% endfor %}
+</table>
+        
+    
+</body>
+</html>
