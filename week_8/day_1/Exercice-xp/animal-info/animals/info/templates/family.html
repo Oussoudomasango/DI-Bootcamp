@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{%block contenu%}
+    <h1>Liste des animaux qui sont de la meme famille: </h1>
+    {%for i in  dico.animals%}
+        {%if x == i.family %}
+        <p>name: {{ i.name }}</p>
+        <p>legs: {{ i.legs }}</p>
+        <p>weight: {{ i.weight }}</p>
+        <p>height: {{ i.height }}</p>
+        <p>speed: {{ i.speed }}</p>
+        <p>family: {{ i.family }}</p>
+        <p>****************</p>
+        {%endif%}
+    {%endfor%}
+ {%endblock%}
