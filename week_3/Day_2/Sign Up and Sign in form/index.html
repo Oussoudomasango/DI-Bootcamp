@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Form/ Sign up Form</title>
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+            <div class="form sign-in-form">
+               <div class="wrapper">
+                <form action="#">
+                    <h1>Sign In</h1>
+                    <p>Use your email and password to sign in</p>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit">Sign In</button>  
+                </form>
+               </div> 
+            </div>
+            <div class="form sign-up-form active">
+                <div class="wrapper">
+                    <form action="#">
+                        <h1>Sign Up</h1>
+                        <p>Please, provide all the correct info to create an account</p>
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit">Sign In</button>
+                         
+                    </form>
+                </div> 
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-left">
+                        <h1>Create Account</h1>
+                        <p>or</p>
+                        <button id="signInButton">Log In</button>
+                    </div>
+                    <div class="overlay-right">
+                        <h1>Please, Log In</h1>
+                        <p>or</p>
+                        <button id="signUpButton">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="main.js"></script>
+</body>
+</html>
